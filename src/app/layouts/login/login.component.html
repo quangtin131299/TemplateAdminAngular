@@ -1,0 +1,45 @@
+<app-loading *ngIf="showLoading"></app-loading>
+
+<div class="login-container" *ngIf="!showLoading">
+    <mat-card class="card-login">
+        <div class="process-bar-container">
+            <mat-progress-bar mode="indeterminate" [hidden]="true"></mat-progress-bar>
+        </div>
+
+        <!-- Title login -->
+        <div>
+            <div class="logo-app-container">
+                <div class="background-logo-app-container">
+                    <img src="../../../assets/ic_app.png" />
+                </div>
+            </div>
+
+            <div class="title-container">
+                <span>Đăng nhập Admin</span>
+            </div>
+        </div>
+
+        <div class="content-login-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Tên đăng nhập</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <mat-icon matPrefix>lock</mat-icon>
+            </mat-form-field>
+
+            <div>
+                <button mat-raised-button color="primary" (click)="LoginSubmit()" class="btn-login">Đăng nhập</button>
+            </div>
+
+            <!-- Login  -->
+            <div class="checkbox-container">
+                <mat-checkbox class="example-margin" color="primary">Nhớ mật khẩu</mat-checkbox>
+            </div>
+        </div>
+    </mat-card>
+</div>

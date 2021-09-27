@@ -1,0 +1,25 @@
+<div class="app-container">
+    <!-- Header -->
+    <div>
+        <app-header></app-header>
+    </div>
+
+    <!-- Body -->
+    <div class="content-container">
+        <mat-drawer-container>
+            <mat-drawer mode='side' opened>
+                <app-sidebar></app-sidebar>
+            </mat-drawer>
+            <mat-drawer-content>
+                <router-outlet></router-outlet>
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Footer -->
+    <div class="footer-container">
+        <app-footer></app-footer>
+    </div>
+</div>

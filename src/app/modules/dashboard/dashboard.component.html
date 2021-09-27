@@ -1,0 +1,57 @@
+<mat-card class="example-card">
+    <div [class]="isHiddenProcessbar">
+        <mat-progress-bar mode="indeterminate" [hidden]="true"></mat-progress-bar>
+    </div>
+    
+    <div>
+        <mat-card-title>
+            <span>Thông tin phim</span>
+        </mat-card-title>
+    </div>
+    
+    <div>
+        <mat-card-content>
+            <div class="row-container">
+                <mat-form-field appearance="outline" class="input-name-movie">
+                    <mat-label>Tên phim</mat-label>
+                    <input matInput placeholder="Placeholder"  [value]="nameMovie">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="input-time-movie">
+                    <mat-label>Thời gian phim</mat-label>
+                    <input matInput placeholder="Placeholder" type="number" [value]="nameMovie">
+                </mat-form-field>
+            </div>
+
+            <div class="row-container row-upload-container">
+                <div class="upload-image-movie-container">
+                    <div class="upload-btn-container">
+                        <button class="btn-upload" (click)="openFile()" mat-raised-button color="primary">Upload file</button>
+                        <div class="image-upload-container">
+                            <span>Hình ảnh</span>
+                        </div>      
+                    </div>
+                   
+                </div>
+                <div class="upload-image-movie-container">
+                    <div class="upload-btn-container">
+                        <button class="btn-upload" (click)="openFile()" mat-raised-button color="primary">Upload file</button>
+                        <div class="image-upload-container">
+                            <span>Hình ảnh</span>
+                        </div>   
+                    </div>
+                      
+                </div>            
+            </div>
+            
+        </mat-card-content>
+    </div>        
+
+
+    <mat-divider inset></mat-divider>
+
+    <div class="action-container">
+        <button (click)="submitAddMovie()" id="btn-add-new-movie" mat-raised-button color='primary'>Thêm phim mới</button>
+        <button mat-raised-button>Hủy bỏ</button>
+    </div>
+
+</mat-card>
